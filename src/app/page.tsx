@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Socials } from './clientComponents.tsx'
+import { Socials, TechStack } from './clientComponents.tsx'
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <TechStack/>
     </main>
   )
 }

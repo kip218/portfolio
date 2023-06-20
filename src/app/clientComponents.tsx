@@ -14,6 +14,10 @@ function Navlist() {
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
+  function toggle() {
+    setToggleMenu(!toggleMenu);
+  }
+
   function toggleOn() {
     setToggleMenu(true);
   }
@@ -23,9 +27,9 @@ function Navbar() {
   }
 
   return (
-    <div className="navbar sticky top-0 bg-white shadow-md h-10">
+    <div className="navbar sticky top-0 bg-white shadow-md h-10 z-50">
       <div className="navbar-start">
-        <div onMouseOver={toggleOn} onMouseLeave={toggleOff} className="dropdown dropdown-hover transform md:-translate-x-5 md:opacity-0 transition-all duration-1000">
+        <div onClick={toggle} onMouseEnter={toggleOn} onMouseLeave={toggleOff} className={`dropdown ${toggleMenu?"dropdown-open":""} transform md:-translate-x-5 md:opacity-0 transition-all duration-1000`}>
           <label className={`btn btn-ghost swap swap-rotate ${toggleMenu?"swap-active":""}`}>
             <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50"><path d="M 5 9 L 5 11 L 45 11 L 45 9 L 5 9 z M 5 24 L 5 26 L 45 26 L 45 24 L 5 24 z M 5 39 L 5 41 L 45 41 L 45 39 L 5 39 z"></path></svg>
             <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50"><path d="M 7.7070312 6.2929688 L 6.2929688 7.7070312 L 23.585938 25 L 6.2929688 42.292969 L 7.7070312 43.707031 L 25 26.414062 L 42.292969 43.707031 L 43.707031 42.292969 L 26.414062 25 L 43.707031 7.7070312 L 42.292969 6.2929688 L 25 23.585938 L 7.7070312 6.2929688 z"></path></svg>      
@@ -81,4 +85,18 @@ function Socials() {
   )
 }
 
-export { Navbar, Socials };
+function TechStack() {
+
+  return (
+    <ul className="flex pt-16">
+      <li className="pr-5">
+        Python
+      </li>
+      <li className="pr-2">
+        PostgreSQL
+      </li>
+    </ul>
+  )
+}
+
+export { Navbar, Socials, TechStack };
