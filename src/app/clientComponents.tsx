@@ -369,6 +369,7 @@ function Experience() {
               width={512}
               height={512}
               className="w-10 h-10 inline mr-4"
+              alt=""
             />
             SecurityScorecard
           </div>
@@ -388,6 +389,7 @@ function Experience() {
               width={600}
               height={600}
               className="w-10 h-10 inline mr-4"
+              alt=""
             />
             Republic of Korea Air Force
           </div>
@@ -407,6 +409,7 @@ function Experience() {
               width={450}
               height={450}
               className="w-10 h-10 inline mr-4"
+              alt=""
             />
             NYU TRIO Scholars
           </div>

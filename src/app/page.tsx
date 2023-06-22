@@ -15,6 +15,7 @@ export default function Home() {
               width={1200}
               height={1200}
               className="max-w-sm rounded-full border-2 border-black shadow-2xl w-40 sm:w-56 md:w-80 transition-all duration-1000"
+              alt=""
             />
             <div>
               <h1 className="text-3xl md:text-5xl font-bold transition-all duration-1000">
