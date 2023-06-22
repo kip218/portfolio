@@ -120,7 +120,7 @@ function Navbar() {
         </div>
         <a
           href="/#home"
-          className={`${kanit.className} text-2xl p-2 transform md:-translate-x-12 transition-all duration-1000`}
+          className={`${kanit.className} whitespace-nowrap md:text-2xl p-2 transform md:-translate-x-12 transition-all duration-1000`}
         >
           Kang-In Park
         </a>
