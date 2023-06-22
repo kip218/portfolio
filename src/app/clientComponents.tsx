@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Kanit } from "next/font/google";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const kanit = Kanit({
@@ -11,7 +11,7 @@ const kanit = Kanit({
 
 const listVariants = {
   hidden: {
-    opacity: 0
+    opacity: 0,
   },
   visible: {
     opacity: 1,
@@ -19,22 +19,22 @@ const listVariants = {
       duration: 0.5,
       ease: "easeInOut",
       delayChildren: 0, // this will set a delay before the children start animating
-      staggerChildren: 0.1 // this will set the time inbetween children animation
-    }
-  }
+      staggerChildren: 0.1, // this will set the time inbetween children animation
+    },
+  },
 };
 
 const itemVariants = {
   hidden: {
-    x: "100vw"
+    x: "100vw",
   },
   visible: {
     x: 0,
     transition: {
       ease: "easeInOut",
-      type: "spring"
-    }
-  }
+      type: "spring",
+    },
+  },
 };
 
 function Navlist() {
@@ -51,7 +51,7 @@ function Navlist() {
           Resume
         </a>
       </li>
-{/*      <li>
+      {/*      <li>
         <a href="https://kangin.me/blog/" target="_blank">
           Blog
         </a>
@@ -208,8 +208,17 @@ function Socials() {
 
 function TechStack() {
   return (
-    <motion.ul className="flex flex-wrap justify-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={listVariants}>
-      <motion.li className="pl-8 pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
+    <motion.ul
+      className="flex flex-wrap justify-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={listVariants}
+    >
+      <motion.li
+        className="pl-8 pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700"
+        variants={itemVariants}
+      >
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +234,10 @@ function TechStack() {
           ></path>
         </svg>
       </motion.li>
-      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
+      <motion.li
+        className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700"
+        variants={itemVariants}
+      >
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +261,10 @@ function TechStack() {
           ></path>
         </svg>
       </motion.li>
-      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
+      <motion.li
+        className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700"
+        variants={itemVariants}
+      >
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +294,10 @@ function TechStack() {
           ></path>
         </svg>
       </motion.li>
-      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
+      <motion.li
+        className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700"
+        variants={itemVariants}
+      >
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -338,7 +356,10 @@ function TechStack() {
           </g>
         </svg>
       </motion.li>
-      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
+      <motion.li
+        className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700"
+        variants={itemVariants}
+      >
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -356,11 +377,20 @@ function TechStack() {
 
 function Experience() {
   return (
-    <motion.ul className="flex flex-col justify-between w-full" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={listVariants}>
+    <motion.ul
+      className="flex flex-col justify-between w-full"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={listVariants}
+    >
       <p className="p-4 text-xl md:text-3xl font-bold transition-all duration-1000">
         Previously I have worked at
       </p>
-      <motion.li className="py-2 md:py-4 transition-all duration-500" variants={itemVariants}>
+      <motion.li
+        className="py-2 md:py-4 transition-all duration-500"
+        variants={itemVariants}
+      >
         <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
@@ -374,13 +404,14 @@ function Experience() {
             SecurityScorecard
           </div>
           <div className="collapse-content bg-white">
-            <p className="pt-4">
-              as a Signal Intelligence Collections Intern
-            </p>
+            <p className="pt-4">as a Signal Intelligence Collections Intern</p>
           </div>
         </div>
       </motion.li>
-      <motion.li className="py-2 md:py-4 transition-all duration-500" variants={itemVariants}>
+      <motion.li
+        className="py-2 md:py-4 transition-all duration-500"
+        variants={itemVariants}
+      >
         <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
@@ -394,13 +425,14 @@ function Experience() {
             Republic of Korea Air Force
           </div>
           <div className="collapse-content">
-            <p className="pt-4">
-              as an Enlisted Aircraft Mechanic
-            </p>
+            <p className="pt-4">as an Enlisted Aircraft Mechanic</p>
           </div>
         </div>
       </motion.li>
-      <motion.li className="py-2 md:py-4 transition-all duration-500" variants={itemVariants}>
+      <motion.li
+        className="py-2 md:py-4 transition-all duration-500"
+        variants={itemVariants}
+      >
         <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
@@ -414,9 +446,7 @@ function Experience() {
             NYU TRIO Scholars
           </div>
           <div className="collapse-content">
-            <p className="pt-4">
-              as a Python Tutor
-            </p>
+            <p className="pt-4">as a Python Tutor</p>
           </div>
         </div>
       </motion.li>

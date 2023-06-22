@@ -22,8 +22,8 @@ export default function Home() {
                 Back-End Developer 👋
               </h1>
               <p className="py-6 text-xl leading-loose">
-                Hi, I'm Kang-In Park. A back-end developer based in New York.<br/>
-                I like building cool things and learning new things.
+                Hi, I'm Kang-In Park. A back-end developer based in New York.
+                <br />I like building cool things and learning new things.
               </p>
               <Socials />
             </div>
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="hero flex-col mt-4 md:mt-12 2xl:mt-32 items-center">
           <div className="hero-content flex-col md:flex-row md:divide-x divide-gray-400">
-            <p className="md:pr-8 text-xl transition-all duration-1000" >
+            <p className="md:pr-8 text-xl transition-all duration-1000">
               I enjoy working with
             </p>
             <TechStack />
