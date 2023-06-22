@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Kanit } from "next/font/google";
+import { motion } from 'framer-motion';
 import Image from "next/image";
 
 const kanit = Kanit({
@@ -8,9 +9,40 @@ const kanit = Kanit({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+const listVariants = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+      delayChildren: 0, // this will set a delay before the children start animating
+      staggerChildren: 0.1 // this will set the time inbetween children animation
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: {
+    x: "100vw"
+  },
+  visible: {
+    x: 0,
+    transition: {
+      ease: "easeInOut",
+      type: "spring"
+    }
+  }
+};
+
 function Navlist() {
   return (
-    <ul className="menu md:menu-horizontal menu-vertical px-1 text-lg">
+    <ul className="menu md:menu-horizontal menu-vertical px-1 2xl:text-lg">
+      <li>
+        <a href="#home">Home</a>
+      </li>
       <li>
         <a href="#experience">My Experience</a>
       </li>
@@ -19,11 +51,11 @@ function Navlist() {
           Resume
         </a>
       </li>
-      <li>
+{/*      <li>
         <a href="https://kangin.me/blog/" target="_blank">
           Blog
         </a>
-      </li>
+      </li>*/}
     </ul>
   );
 }
@@ -87,7 +119,7 @@ function Navbar() {
           </ul>
         </div>
         <a
-          href="/"
+          href="/#home"
           className={`${kanit.className} text-2xl p-2 transform md:-translate-x-12 transition-all duration-1000`}
         >
           Kang-In Park
@@ -176,8 +208,8 @@ function Socials() {
 
 function TechStack() {
   return (
-    <ul className="flex flex-wrap justify-center">
-      <li className="pl-8 pr-2 md:pr-8 hover:-translate-y-6 transition-all duration-700">
+    <motion.ul className="flex flex-wrap justify-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={listVariants}>
+      <motion.li className="pl-8 pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -192,8 +224,8 @@ function TechStack() {
             d="M23.078,43c1.555-0.005,2.633-0.142,3.936-0.367c3.848-0.67,4.549-2.077,4.549-4.67V34h-9v-2h9.343h4.35c2.636,0,4.943-1.242,5.674-4.219c0.826-3.417,0.863-5.557,0-9.125C41.274,15.995,39.831,14,37.194,14h-3.632v5.104c0,2.966-2.686,5.896-5.764,5.896h-7.236c-2.523,0-5,1.862-5,4.377v8.586c0,2.439,1.759,4.263,4.218,4.672C19.719,42.641,21.536,43.006,23.078,43z M28.063,39c-0.821,0-1.5-0.677-1.5-1.502c0-0.833,0.679-1.498,1.5-1.498c0.837,0,1.5,0.664,1.5,1.498C29.563,38.32,28.899,39,28.063,39z"
           ></path>
         </svg>
-      </li>
-      <li className="pr-2 md:pr-8 hover:-translate-y-6 transition-all duration-700">
+      </motion.li>
+      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -216,8 +248,8 @@ function TechStack() {
             d="M20.681 18.501c-.292.302-.753.566-1.262.484-.828-.134-1.463-1.133-1.417-1.508h0c.044-.374.751-.569 1.578-.435.287.047.548.128.768.228-.32-.688-.899-1.085-1.782-1.182-1.565-.174-3.226.644-3.56 1.097.007.11.02.251.033.417.093 1.147.265 3.284-.05 5.537-.208 1.485.393 3.169 1.567 4.395.757.79 1.641 1.29 2.513 1.438.111-.478.309-.944.513-1.425.113-.265.233-.547.346-.852l.162-.427c.443-1.155.9-2.35.909-4.703C21.003 20.66 20.892 19.627 20.681 18.501zM34.847 22.007c-.104-.729-.211-1.484-.185-2.303.023-.742.105-1.442.184-2.119.062-.533.11-1.045.138-1.55-1.289.107-2.145.479-2.551 1.108.168-.057.358-.102.568-.129.892-.116 1.543.141 1.618.637.055.363-.253.705-.388.836-.277.269-.626.442-.981.488-.064.008-.129.012-.192.012-.353 0-.69-.121-.949-.3.112 1.973 1.567 4.612 2.283 5.907.153.277.271.498.369.688C35.154 24.163 35.009 23.143 34.847 22.007z"
           ></path>
         </svg>
-      </li>
-      <li className="pr-2 md:pr-8 hover:-translate-y-6 transition-all duration-700">
+      </motion.li>
+      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -246,8 +278,8 @@ function TechStack() {
             d="M37.226,34.857l-3.704,2.185c-0.109,0.061-0.244-0.019-0.244-0.143v-1.252 c0-0.113,0.061-0.217,0.16-0.273l3.704-2.185c0.111-0.061,0.246,0.019,0.246,0.145v1.248 C37.388,34.697,37.326,34.801,37.226,34.857"
           ></path>
         </svg>
-      </li>
-      <li className="pr-2 md:pr-8 hover:-translate-y-6 transition-all duration-700">
+      </motion.li>
+      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -305,8 +337,8 @@ function TechStack() {
             ></path>
           </g>
         </svg>
-      </li>
-      <li className="pr-2 md:pr-8 hover:-translate-y-6 transition-all duration-700">
+      </motion.li>
+      <motion.li className="pr-2 md:pr-8 hover:!-translate-y-6 transition-all duration-700" variants={itemVariants}>
         <svg
           className="fill-current w-14 h-14 md:w-20 md:h-20"
           xmlns="http://www.w3.org/2000/svg"
@@ -317,18 +349,21 @@ function TechStack() {
             d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"
           ></path>
         </svg>
-      </li>
-    </ul>
+      </motion.li>
+    </motion.ul>
   );
 }
 
 function Experience() {
   return (
-    <ul className="flex flex-col justify-between md:text-xl w-full">
-      <li className="py-2 md:py-4 transition-all duration-500">
+    <motion.ul className="flex flex-col justify-between w-full" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={listVariants}>
+      <p className="p-4 text-xl md:text-3xl font-bold transition-all duration-1000">
+        Previously I have worked at
+      </p>
+      <motion.li className="py-2 md:py-4 transition-all duration-500" variants={itemVariants}>
         <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
-          <div className="collapse-title">
+          <div className="collapse-title lg:text-lg font-bold">
             <Image
               src="/securityscorecard.png"
               width={512}
@@ -339,17 +374,15 @@ function Experience() {
           </div>
           <div className="collapse-content bg-white">
             <p className="pt-4">
-              Signal Intelligence Collections Intern
-              <br />
-              2022
+              as a Signal Intelligence Collections Intern
             </p>
           </div>
         </div>
-      </li>
-      <li className="py-2 md:py-4 transition-all duration-500">
+      </motion.li>
+      <motion.li className="py-2 md:py-4 transition-all duration-500" variants={itemVariants}>
         <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
-          <div className="collapse-title">
+          <div className="collapse-title lg:text-lg font-bold">
             <Image
               src="/rokaf.png"
               width={600}
@@ -360,17 +393,15 @@ function Experience() {
           </div>
           <div className="collapse-content">
             <p className="pt-4">
-              Enlisted Aircraft Mechanic
-              <br />
-              2019-2021
+              as an Enlisted Aircraft Mechanic
             </p>
           </div>
         </div>
-      </li>
-      <li className="py-2 md:py-4 transition-all duration-500">
+      </motion.li>
+      <motion.li className="py-2 md:py-4 transition-all duration-500" variants={itemVariants}>
         <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
-          <div className="collapse-title">
+          <div className="collapse-title lg:text-lg font-bold">
             <Image
               src="/nyu.png"
               width={450}
@@ -381,14 +412,12 @@ function Experience() {
           </div>
           <div className="collapse-content">
             <p className="pt-4">
-              Python Tutor
-              <br />
-              2018-2019
+              as a Python Tutor
             </p>
           </div>
         </div>
-      </li>
-    </ul>
+      </motion.li>
+    </motion.ul>
   );
 }
 

@@ -20,16 +20,17 @@ export default function Home() {
               <h1 className="text-3xl md:text-5xl font-bold transition-all duration-1000">
                 Back-End Developer 👋
               </h1>
-              <p className="py-6 text-xl">
-                Hi, I'm Kang-In Park. A back-end developer based in New York.
+              <p className="py-6 text-xl leading-loose">
+                Hi, I'm Kang-In Park. A back-end developer based in New York.<br/>
+                I like building cool things and learning new things.
               </p>
               <Socials />
             </div>
           </div>
         </div>
-        <div className="hero flex-col md:mt-32 items-center">
+        <div className="hero flex-col mt-4 md:mt-12 2xl:mt-32 items-center">
           <div className="hero-content flex-col md:flex-row md:divide-x divide-gray-400">
-            <p className="md:pr-8 text-xl transition-all duration-1000">
+            <p className="md:pr-8 text-xl transition-all duration-1000" >
               I enjoy working with
             </p>
             <TechStack />
@@ -41,14 +42,16 @@ export default function Home() {
         className="flex flex-col h-full min-h-[650px] items-center justify-center bg-white"
       >
         <div className="hero flex-col">
-          <div className="hero-content flex-col p-0 my-48">
-            <p className="p-4 text-2xl md:text-3xl font-bold transition-all duration-1000">
-              Previously I have worked at
-            </p>
+          <div className="hero-content flex-col p-0 my-12">
             <Experience />
           </div>
         </div>
       </div>
+      <footer className="footer footer-center p-4 text-base-content">
+        <div>
+          <p>Made with Next.JS and TailwindCSS</p>
+        </div>
+      </footer>
     </main>
   );
 }
