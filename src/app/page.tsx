@@ -6,7 +6,7 @@ export default function Home() {
     <main className="overflow-y-scroll scroll-smooth scrollbar">
       <div
         id="home"
-        className="flex flex-col h-full min-h-[650px] items-center justify-center"
+        className="flex flex-col h-full min-h-[750px] items-center justify-center"
       >
         <div className="hero flex-col">
           <div className="hero-content flex-col md:flex-row-reverse">
