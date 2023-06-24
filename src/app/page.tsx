@@ -19,11 +19,10 @@ export default function Home() {
             />
             <div>
               <h1 className="text-3xl md:text-5xl font-bold transition-all duration-1000">
-                Back-End Developer 👋
+                Hi, I'm Kang-In 👋
               </h1>
               <p className="py-6 text-xl leading-loose">
-                Hi, I'm Kang-In Park. A back-end developer based in New York.
-                <br />I like building cool things and learning new things.
+                I like building cool stuff and learning new things.
               </p>
               <Socials />
             </div>
