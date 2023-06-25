@@ -12,8 +12,8 @@ export default function Home() {
           <div className="hero-content flex-col md:flex-row-reverse">
             <Image
               src="/profile.png"
-              width={1200}
-              height={1200}
+              width={1058}
+              height={1058}
               className="max-w-sm rounded-full border-2 border-black shadow-2xl w-40 sm:w-56 md:w-80 transition-all duration-1000"
               alt=""
             />
