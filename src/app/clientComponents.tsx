@@ -51,11 +51,6 @@ function Navlist() {
           Resume
         </a>
       </li>
-      {/*      <li>
-        <a href="https://kangin.me/blog/" target="_blank">
-          Blog
-        </a>
-      </li>*/}
     </ul>
   );
 }
@@ -114,7 +109,7 @@ function Navbar() {
               <path d="M 7.7070312 6.2929688 L 6.2929688 7.7070312 L 23.585938 25 L 6.2929688 42.292969 L 7.7070312 43.707031 L 25 26.414062 L 42.292969 43.707031 L 43.707031 42.292969 L 26.414062 25 L 43.707031 7.7070312 L 42.292969 6.2929688 L 25 23.585938 L 7.7070312 6.2929688 z"></path>
             </svg>
           </label>
-          <ul className="dropdown-content border border-grey-700 bg-white shadow-xl rounded-box w-40">
+          <ul className="dropdown-content border border-gray-700 bg-white shadow-xl rounded-box w-40 dark:bg-zinc-900 dark:border-zinc-700">
             <Navlist />
           </ul>
         </div>
@@ -391,7 +386,7 @@ function Experience() {
         className="py-2 md:py-4 transition-all duration-500"
         variants={itemVariants}
       >
-        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-700 dark:hover:bg-zinc-600 shadow-lg transition-all duration-500 ease-in-out">
+        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:border-zinc-700 shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
             <Image
@@ -412,7 +407,7 @@ function Experience() {
         className="py-2 md:py-4 transition-all duration-500"
         variants={itemVariants}
       >
-        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-700 dark:hover:bg-zinc-600 shadow-lg transition-all duration-500 ease-in-out">
+        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:border-zinc-700 shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
             <Image
@@ -433,7 +428,7 @@ function Experience() {
         className="py-2 md:py-4 transition-all duration-500"
         variants={itemVariants}
       >
-        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-700 dark:hover:bg-zinc-600 zshadow-lg transition-all duration-500 ease-in-out">
+        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:border-zinc-700 shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
             <Image
