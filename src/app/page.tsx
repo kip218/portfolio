@@ -3,7 +3,7 @@ import { Socials, TechStack, Experience } from "./clientComponents.tsx";
 
 export default function Home() {
   return (
-    <main className="overflow-y-scroll scroll-smooth scrollbar">
+    <main className="overflow-y-scroll overflow-x-hidden scroll-smooth scrollbar">
       <div
         id="home"
         className="flex flex-col h-full min-h-[750px] items-center justify-center"
@@ -14,7 +14,7 @@ export default function Home() {
               src="/profile.png"
               width={1058}
               height={1058}
-              className="max-w-sm rounded-full border-2 border-black shadow-2xl w-40 sm:w-56 md:w-80 transition-all duration-1000"
+              className="max-w-sm rounded-full border-2 border-black dark:border-gray-800 shadow-2xl w-40 sm:w-56 md:w-80 transition-all duration-1000"
               alt=""
             />
             <div>
@@ -39,7 +39,7 @@ export default function Home() {
       </div>
       <div
         id="experience"
-        className="flex flex-col h-full min-h-[650px] items-center justify-center bg-white"
+        className="flex flex-col h-full min-h-[650px] items-center justify-center bg-white dark:bg-zinc-900"
       >
         <div className="hero flex-col">
           <div className="hero-content flex-col p-0 my-12">
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="footer footer-center p-4 text-base-content">
+      <footer className="footer footer-center p-4">
         <div>
           <p>Made with Next.JS and TailwindCSS</p>
         </div>

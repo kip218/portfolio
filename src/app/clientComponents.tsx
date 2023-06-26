@@ -76,7 +76,7 @@ function Navbar() {
   }
 
   return (
-    <div className="navbar sticky top-0 bg-white shadow-md h-28 z-50">
+    <div className="navbar sticky top-0 bg-white dark:bg-zinc-900 shadow-md h-28 z-50">
       <div className="navbar-start">
         <div
           onClick={toggle}
@@ -391,7 +391,7 @@ function Experience() {
         className="py-2 md:py-4 transition-all duration-500"
         variants={itemVariants}
       >
-        <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
+        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-700 dark:hover:bg-zinc-600 shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
             <Image
@@ -403,7 +403,7 @@ function Experience() {
             />
             SecurityScorecard
           </div>
-          <div className="collapse-content bg-white">
+          <div className="collapse-content dark:bg-zinc-700">
             <p className="pt-4">as a Signal Intelligence Collections Intern</p>
           </div>
         </div>
@@ -412,7 +412,7 @@ function Experience() {
         className="py-2 md:py-4 transition-all duration-500"
         variants={itemVariants}
       >
-        <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
+        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-700 dark:hover:bg-zinc-600 shadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
             <Image
@@ -424,7 +424,7 @@ function Experience() {
             />
             Republic of Korea Air Force
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content dark:bg-zinc-700">
             <p className="pt-4">as an Enlisted Aircraft Mechanic</p>
           </div>
         </div>
@@ -433,7 +433,7 @@ function Experience() {
         className="py-2 md:py-4 transition-all duration-500"
         variants={itemVariants}
       >
-        <div className="collapse collapse-arrow border border-gray-400 hover:bg-gray-100 bg-white shadow-lg transition-all duration-500 ease-in-out">
+        <div className="collapse collapse-arrow border border-gray-600 hover:bg-gray-100 bg-white dark:bg-zinc-700 dark:hover:bg-zinc-600 zshadow-lg transition-all duration-500 ease-in-out">
           <input type="checkbox" />
           <div className="collapse-title lg:text-lg font-bold">
             <Image
@@ -445,7 +445,7 @@ function Experience() {
             />
             NYU TRIO Scholars
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content dark:bg-zinc-700">
             <p className="pt-4">as a Python Tutor</p>
           </div>
         </div>
