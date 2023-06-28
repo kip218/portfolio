@@ -399,7 +399,7 @@ function Experience() {
             />
             SecurityScorecard
           </div>
-          <div className="collapse-content dark:bg-zinc-700">
+          <div className="collapse-content dark:bg-zinc-800">
             <p className="pt-4">as a Signal Intelligence Collections Intern</p>
           </div>
         </div>
@@ -420,7 +420,7 @@ function Experience() {
             />
             Republic of Korea Air Force
           </div>
-          <div className="collapse-content dark:bg-zinc-700">
+          <div className="collapse-content dark:bg-zinc-800">
             <p className="pt-4">as an Enlisted Aircraft Mechanic</p>
           </div>
         </div>
@@ -441,7 +441,7 @@ function Experience() {
             />
             NYU TRIO Scholars
           </div>
-          <div className="collapse-content dark:bg-zinc-700">
+          <div className="collapse-content dark:bg-zinc-800">
             <p className="pt-4">as a Python Tutor</p>
           </div>
         </div>
