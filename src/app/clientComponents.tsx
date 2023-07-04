@@ -1,13 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Kanit } from "next/font/google";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const kanit = Kanit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
 
 const listVariants = {
   hidden: {
@@ -74,11 +68,24 @@ function Navbar() {
   return (
     <div className="navbar sticky top-0 bg-white dark:bg-zinc-900 shadow-md h-28 z-50">
       <div className="navbar-start">
+        <a
+          href="/#home"
+          className={
+            "whitespace-nowrap md:text-2xl p-4 transition-all duration-1000"
+          }
+        >
+          Kang-In Park
+        </a>
+      </div>
+      <div className="navbar-end hidden md:flex">
+        <Navlist />
+      </div>
+      <div className="navbar-end visible md:hidden">
         <div
           onClick={toggle}
           onMouseEnter={toggleOn}
           onMouseLeave={toggleOff}
-          className={`dropdown ${
+          className={`dropdown dropdown-end ${
             toggleMenu ? "dropdown-open" : ""
           } transform md:-translate-x-5 md:opacity-0 transition-all duration-1000`}
         >
@@ -114,15 +121,6 @@ function Navbar() {
             <Navlist />
           </ul>
         </div>
-        <a
-          href="/#home"
-          className={`${kanit.className} whitespace-nowrap md:text-2xl p-2 transform md:-translate-x-12 transition-all duration-1000`}
-        >
-          Kang-In Park
-        </a>
-      </div>
-      <div className="navbar-end hidden md:flex">
-        <Navlist />
       </div>
     </div>
   );

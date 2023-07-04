@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} flex flex-col h-screen dark:bg-zinc-800`}>
+      <body
+        className={`${nunito.className} flex flex-col h-screen dark:bg-zinc-800`}
+      >
         <Navbar />
         {children}
       </body>
