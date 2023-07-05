@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter, Nunito } from "next/font/google";
-import { Navbar } from "./clientComponents.tsx";
+import Navbar from "../components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const nunito = Nunito({ subsets: ["latin"] });

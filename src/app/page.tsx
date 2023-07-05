@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { Socials, TechStack, Experience } from "./clientComponents.tsx";
+import Socials from "../components/Socials";
+import Experience from "../components/Experience";
+import TechStack from "../components/TechStack";
 
 export default function Home() {
   return (
