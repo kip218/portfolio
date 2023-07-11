@@ -2,6 +2,16 @@ import Date from "@/components/Date";
 
 import { getSortedPostsData } from "@/lib/blogUtil";
 
+type AllPostsData = {
+  date: string
+  title: string
+  id: string
+}[]
+
+export const metadata = {
+  title: siteTitle,
+}
+
 export default function Blog() {
   const allPostsData: AllPostsData = getSortedPostsData();
   return (
