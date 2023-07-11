@@ -8,10 +8,6 @@ type AllPostsData = {
   id: string
 }[]
 
-export const metadata = {
-  title: siteTitle,
-}
-
 export default function Blog() {
   const allPostsData: AllPostsData = getSortedPostsData();
   return (
