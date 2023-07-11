@@ -9,8 +9,10 @@ module.exports = {
     extend: {
       colors: {
         "linkedin-blue": "#0077b5",
+        "dark-bg": "rgb(39 39 42)",
+        "light-bg": "rgb(248, 248, 248)",
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
 };

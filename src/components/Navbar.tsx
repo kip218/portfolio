@@ -5,15 +5,18 @@ function Navlist() {
   return (
     <ul className="menu md:menu-horizontal menu-vertical px-1 2xl:text-lg">
       <li>
-        <a href="#home">Home</a>
+        <a href="/#home">Home</a>
       </li>
       <li>
-        <a href="#experience">My Experience</a>
+        <a href="/#experience">My Experience</a>
       </li>
       <li>
         <a href="/Resume.pdf" target="_blank">
           Resume
         </a>
+      </li>
+      <li>
+        <a href="/blog">Blog</a>
       </li>
     </ul>
   );
@@ -35,7 +38,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="navbar sticky top-0 bg-white dark:bg-zinc-900 shadow-md h-28 z-50">
+    <div className="navbar sticky top-0 bg-white dark:bg-zinc-900 shadow-md h-16 z-50">
       <div className="navbar-start">
         <a
           href="/#home"
