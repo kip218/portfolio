@@ -15,9 +15,6 @@ function Navlist() {
           Resume
         </a>
       </li>
-      <li>
-        <a href="/blog">Blog</a>
-      </li>
     </ul>
   );
 }
