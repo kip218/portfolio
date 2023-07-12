@@ -39,7 +39,7 @@ HTTP requests from victim host:
 
 On further analyzing the HTTP packets, we can see multiple HTTP GET requests made to the malicious endpoint.
 
-![](/blog-images/OSINT_SIEMS/splunk_http.png
+![](/blog-images/OSINT_SIEMS/splunk_http.png)
 
 Based on my research of the "Adylkuzz" malware, these GET requests serve different roles.
 
